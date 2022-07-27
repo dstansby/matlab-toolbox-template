@@ -9,6 +9,10 @@ import matlab.unittest.plugins.CodeCoveragePlugin
 import matlab.unittest.plugins.XMLPlugin
 import matlab.unittest.plugins.codecoverage.CoberturaFormat
 
+
+oldpath = path;
+path('.', oldpath);
+
 suite = testsuite(pwd, 'IncludeSubfolders', true);
 
 [~,~] = mkdir('artifacts');
