@@ -16,3 +16,6 @@ jobs:
         uses: matlab-actions/run-command@v1
         with:
           command: run_tests
+
+      - name: Upload code coverage
+        uses: codecov/codecov-action@v3
