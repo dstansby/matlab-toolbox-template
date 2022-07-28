@@ -1,6 +1,7 @@
 # matlab-sandbox
 [![Run MATLAB tests](https://github.com/dstansby/matlab-sandbox/actions/workflows/run_tests.yml/badge.svg)](https://github.com/dstansby/matlab-sandbox/actions/workflows/run_tests.yml)
 [![codecov](https://codecov.io/gh/dstansby/matlab-sandbox/branch/main/graph/badge.svg?token=346NBCNNPY)](https://codecov.io/gh/dstansby/matlab-sandbox)
+[![Documentation Status](https://readthedocs.org/projects/matlab-sandbox/badge/?version=latest)](https://matlab-sandbox.readthedocs.io/?badge=latest)
 
 A sample MATLAB package with all the nuts and bolts needed for a nice open source package. The package source code is in [+mypackage](+mypackage).
 
@@ -20,4 +21,4 @@ function ave = average(x)
     ave = sum(x(:)) / numel(x);
 end
 ```
-The documentation is built using [sphinx](https://www.sphinx-doc.org), withd documentation config and structure in [docs](docs).
+The documentation is built using [sphinx](https://www.sphinx-doc.org), with documentation config and structure in [docs](docs). It's automatically built using [readthedocs](https://readthedocs.org/projects/matlab-sandbox/).
