@@ -3,4 +3,4 @@ API documentation
 
 .. currentmodule:: +mypackage
 
-.. autofunction:: average
+.. autofunction:: my_average_function
