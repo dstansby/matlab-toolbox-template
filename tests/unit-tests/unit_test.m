@@ -10,7 +10,7 @@ classdef unit_test < matlab.unittest.TestCase
     methods (Test)
 
         function testEqual(testCase)
-            result = mypackage.average([1, 3])
+            result = mypackage.my_average_function([1, 3])
             testCase.verifyEqual(result, 2)
         end
 
