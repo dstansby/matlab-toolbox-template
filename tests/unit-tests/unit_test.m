@@ -3,15 +3,15 @@
 % The class name must be equal to the filename
 % Functions can have arbiratry names, but must take the testCase argument
 %
-% To run the tests change to the directory of this file and execute
-% `runtests`.
+% Use the `run_tests.m` file in the roof of this repository to run
+% the tests.
 
 classdef unit_test < matlab.unittest.TestCase
     methods (Test)
 
         function testEqual(testCase)
-            result = mypackage.my_average_function([1, 3])
-            testCase.verifyEqual(result, 2)
+            result = mypackage.add_one([1, 3])
+            testCase.verifyEqual(result, [2, 4])
         end
 
         function testNotEqual(testCase)
