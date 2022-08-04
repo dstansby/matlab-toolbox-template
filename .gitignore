@@ -1,2 +1,4 @@
 artifacts/
 docs/_build
+
+*.pyc

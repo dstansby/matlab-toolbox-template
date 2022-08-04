@@ -6,6 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import pathlib
+import sys
 
 project = "mypackage"
 copyright = "2022, David Stansby"
@@ -38,3 +39,8 @@ matlab_keep_package_prefix = False
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
+
+ext_dir = pathlib.Path(__file__).parent.parent / "sphinx-matlab-docstrings"
+sys.path.append(str(ext_dir.resolve()))
+
+extensions += ["parser"]
