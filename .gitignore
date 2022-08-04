@@ -2,3 +2,4 @@ artifacts/
 docs/_build
 
 *.pyc
+*.mltbx
