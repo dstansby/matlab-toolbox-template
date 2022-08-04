@@ -19,7 +19,6 @@ extensions = [
     'myst_parser',
     'sphinxcontrib.matlab',
     'sphinx.ext.autodoc',
-    'numpydoc',
 ]
 
 source_suffix = {
