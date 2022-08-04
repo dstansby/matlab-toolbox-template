@@ -40,7 +40,7 @@ matlab_keep_package_prefix = False
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
-ext_dir = pathlib.Path(__file__).parent.parent / "sphinx-matlab-docstrings"
+ext_dir = pathlib.Path(__file__).parent
 sys.path.append(str(ext_dir.resolve()))
 
-extensions += ["parser"]
+extensions += ["matlab_docstring_parser"]
