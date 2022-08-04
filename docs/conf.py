@@ -34,7 +34,7 @@ matlab_src_dir = str(pathlib.Path(__file__).parent.parent.resolve())
 primary_domain = "mat"
 matlab_keep_package_prefix = False
 
-autodoc_member_order = 'groupwise'
+autodoc_member_order = "groupwise"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

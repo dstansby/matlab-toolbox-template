@@ -16,7 +16,7 @@ def process_docstring(
     a MATLAB style docstring to something that looks good using
     sphinx.
     """
-    if what in ['function', 'class']:
+    if what in ["function", "class"]:
         # Strip function name from first line
         lines[0] = " ".join(lines[0].split()[1:])
         # Add empty line between function description and further
