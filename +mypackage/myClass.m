@@ -1,5 +1,5 @@
 classdef myClass
-    % someClass A dummy class
+    % myClass A dummy class
     %   Detailed explanation goes here
 
     properties
@@ -11,10 +11,10 @@ classdef myClass
     end
 
     methods
-        function obj = myClass
+        function obj = myClass(a, b)
             % Constructor
-            obj.a = 1
-            obj.b = 2
+            obj.a = a
+            obj.b = b
         end
 
         function result = aPlusb(obj)
