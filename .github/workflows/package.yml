@@ -16,3 +16,8 @@ jobs:
         uses: matlab-actions/run-command@v1
         with:
           command: create_toolbox
+
+      - name: Check toolbox file created
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "MyToolbox.prj"
