@@ -17,5 +17,13 @@ classdef unit_test < matlab.unittest.TestCase
         function testNotEqual(testCase)
             testCase.verifyNotEqual(1, 2)
         end
+
+        function testClass(testCase)
+            instance = mypackage.myClass(1, 2)
+            testCase.verifyEqual(instance.a, 1)
+            testCase.verifyEqual(instance.b, 2)
+            testCase.verifyEqual(instance.aPlusb(), 3)
+            testCase.verifyTrue(instance.return_true())
+        end
     end
 end
