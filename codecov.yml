@@ -1,3 +1,5 @@
 ignore:
   # MATLAB doesn't measure coverage on the test runner
   - "run_tests.m"
+  - "create_toolbox.m"
+  - "examples/*"
