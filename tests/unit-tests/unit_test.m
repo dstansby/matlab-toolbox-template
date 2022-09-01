@@ -6,12 +6,8 @@
 % Use the `run_tests.m` file in the roof of this repository to run
 % the tests.
 
+% Two simple unit tests
 classdef unit_test < matlab.unittest.TestCase
-    properties (TestParameter)
-        % Parameters that can be used to parametrize tests
-        num1 = {1, 2};
-        num2 = {3, 4};
-    end
 
     methods (Test)
         function testEqual(testCase)
@@ -21,14 +17,6 @@ classdef unit_test < matlab.unittest.TestCase
 
         function testNotEqual(testCase)
             testCase.verifyNotEqual(1, 2)
-        end
-
-        function testClass(testCase, num1, num2)
-            instance = mypackage.myClass(num1, num2)
-            testCase.verifyEqual(instance.a, num1)
-            testCase.verifyEqual(instance.b, num2)
-            testCase.verifyEqual(instance.aPlusb(), num1 + num2)
-            testCase.verifyTrue(instance.return_true())
         end
     end
 end
