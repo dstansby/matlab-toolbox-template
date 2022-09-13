@@ -15,7 +15,7 @@ classdef code_quality_test < matlab.unittest.TestCase
       % Filter out the problems we don't want, only print them
       serious_problems = problems(~ismember({problems.id}, id_of_warnings));
       weak_problems = problems(ismember({problems.id}, id_of_warnings));
-      
+
       if ~isempty(weak_problems)
         disp("");
         disp("Linting errors:");
