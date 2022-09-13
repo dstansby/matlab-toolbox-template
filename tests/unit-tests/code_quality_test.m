@@ -11,19 +11,19 @@ classdef code_quality_test < matlab.unittest.TestCase
       id_of_warnings = [...
         "NAGU", ... % Value assigned to a variable is never used
       ];
-      
+
       % Filter out the problems we don't want, only print them
       serious_problems = problems(~ismember({problems.identifier}, id_of_warnings));
       weak_problems = problems(ismember({problems.identifier}, id_of_warnings));
-    
+
       if ~isempty(weak_problems)
         for i = 1:numel(weak_problems)
           warning(code_quality_test.problemToString(weak_problems(i), mfile));
         end
       end
-    
+
     end
-    
+
     function string_representation = problemToString(problem)
       % Convert a problem to a string.
       % This is used to print the problems.
@@ -36,9 +36,9 @@ classdef code_quality_test < matlab.unittest.TestCase
         problem.message);
     end
   end
-  
+
   methods(Test)
-    
+
     function testCodeQuality(testCase)
 
       % Get all m-files in `mypackage`, recursively.
@@ -59,12 +59,12 @@ classdef code_quality_test < matlab.unittest.TestCase
         % Display problems if there are before failing the test
         if ~isempty(serious_problems)
           % If there are problems, print them.
-          disp("Errors:") 
+          disp("Errors:")
           disp(serious_problems)
         end
 
         testCase.verifyEmpty(serious_problems);
-        
+
       end
     end
 
