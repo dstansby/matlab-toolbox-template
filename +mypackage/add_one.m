@@ -3,5 +3,5 @@ function result = add_one(x)
     %   ADD_ONE(X) returns the input values plus 1.
     %
     %   See also MEAN
-    result = x + 1
+    result = x + 1;
 end
