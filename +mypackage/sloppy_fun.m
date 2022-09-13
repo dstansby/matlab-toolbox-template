@@ -3,6 +3,5 @@ function result = sloppy_fun()
   %   result = sloppy_fun()
   %
   %   It should throw and error while linting
-  result = 1;
-  b = 3;  % Unused variable
+  result = prod(size([1,2,3]));
 end
