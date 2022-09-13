@@ -9,10 +9,10 @@ classdef parametrized_test < matlab.unittest.TestCase
 
     methods (Test)
         function testClass(testCase, num1, num2)
-            instance = mypackage.myClass(num1, num2)
-            testCase.verifyEqual(instance.a, num1)
-            testCase.verifyEqual(instance.b, num2)
-            testCase.verifyEqual(instance.aPlusb(), num1 + num2)
+            instance = mypackage.myClass(num1, num2);
+            testCase.verifyEqual(instance.a, num1);
+            testCase.verifyEqual(instance.b, num2);
+            testCase.verifyEqual(instance.aPlusb(), num1 + num2);
         end
     end
 end
