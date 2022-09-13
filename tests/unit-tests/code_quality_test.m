@@ -18,7 +18,7 @@ classdef code_quality_test < matlab.unittest.TestCase
 
       if ~isempty(weak_problems)
         for i = 1:numel(weak_problems)
-          warning(code_quality_test.problemToString(weak_problems(i), mfile));
+          warning(code_quality_test.problemToString(weak_problems(i)));
         end
       end
 
