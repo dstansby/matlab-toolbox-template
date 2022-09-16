@@ -24,3 +24,7 @@ repos:
     hooks:
     -   id: mypy
         args: [--strict]
+
+
+ci:
+    autofix_prs: false
