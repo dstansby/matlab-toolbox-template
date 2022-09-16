@@ -31,15 +31,12 @@ cd(old_dir);
 % Generate helptoc.xml file from list of .m source files
 addToXML('<?xml version=''1.0'' encoding="utf-8"?>');
 addToXML('<toc version="2.0">');
-addToXML('<tocitem target="mypackage.html">Sample MATLAB package');
-
 % Automatically add links for all .m source files
 addToXML('<tocitem target="">Functions');
 for ind = 1:length(toolbox_filenames)
     [~, func_name, ~] = fileparts(toolbox_filenames{ind});
     addToXML(['<tocitem target="' func_name '.html">' func_name '</tocitem>']);
 end
-addToXML('</tocitem>');
 addToXML('</tocitem>');
 addToXML('</toc>');
 
