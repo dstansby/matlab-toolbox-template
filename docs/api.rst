@@ -3,7 +3,7 @@ API documentation
 
 .. currentmodule:: +mypackage
 
-.. autofunction:: add_one
+.. autofunction:: addOne
 
-.. autoclass:: myClass
+.. autoclass:: MyClass
    :members:
