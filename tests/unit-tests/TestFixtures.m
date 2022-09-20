@@ -3,6 +3,9 @@
 % In this example we have two tests that need a figure. In order
 % to save duplicating code, TestMethodSetup and TestMethodTeardown
 % methods are run respectively before and after every individual test.
+%
+% To instead create setup code that runs once before all tests are run,
+% create methods with the `TestClassSetup` attribute.
 
 classdef TestFixtures < matlab.unittest.TestCase
 
@@ -12,8 +15,8 @@ classdef TestFixtures < matlab.unittest.TestCase
         TestFigure
     end
 
-    % Any methods under the TestMethodSetup section are run
-    % before the tests under the Test section.
+    % Any methods with the TestMethodSetup attribute are run
+    % before each individual test under the Test section.
     methods(TestMethodSetup)
         function createFigure(testCase)
             % Create a figure
@@ -22,8 +25,8 @@ classdef TestFixtures < matlab.unittest.TestCase
     end
 
     methods(TestMethodTeardown)
-        % Any methods under TestMethodTeardown are run after all
-        % tests under the Test section have run.
+        % Any methods with the TestMethodTeardown attribute are
+        % run after each individual test under the Test section.
         function closeFigure(testCase)
             % Close the figure
             close(testCase.TestFigure)
