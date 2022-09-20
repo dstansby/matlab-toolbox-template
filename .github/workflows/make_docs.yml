@@ -14,10 +14,7 @@ concurrency:
 
 jobs:
   build-docs:
-    environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-    name: Build and deploy MATLAB docs
+    name: Build MATLAB docs
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -31,10 +28,34 @@ jobs:
         with:
           command: make_docs
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: helpfiles
+          path: './helpfiles'
+
+  deploy-docs:
+    name: Deploy bulit docs
+    runs-on: ubuntu-latest
+    needs: [build-docs]
+    # Only deploy on main
+    if: success() && github.ref == 'refs/heads/main'
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: helpfiles
+          path: './helpfiles'
+
       - name: Setup Pages
         uses: actions/configure-pages@v2
 
-      - name: Upload artifact
+      - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: './helpfiles'
