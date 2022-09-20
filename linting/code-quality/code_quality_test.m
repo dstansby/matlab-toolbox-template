@@ -5,9 +5,11 @@ classdef code_quality_test < matlab.unittest.TestCase
   methods
 
     function serious_problems = filterProblems(testCase, problems, mfile)
-      % Some problems should only be warnings, not errors.
-      % This function filters them out.
-      % You can add more problems to the list if you want.
+      % Some of the code quality errors are not serious enough to fail the test
+      % suite. This function filters out the ones that are not serious enough.
+      % The list of errors that are not serious enough is hard-coded in the next
+      % variable, and can be updated as needed.
+      % A problem in this list will only print a warning on the consode.
       id_of_warnings = [...
         "PSIZE", ... %  NUMEL(x) is usually faster than PROD(SIZE(x)).
       ];
