@@ -13,6 +13,8 @@ mkdir(output_dir);
 % Get a list of toolbox m-files
 toolbox_filenames = what(package_dir);
 toolbox_filenames = toolbox_filenames.m;
+% Exclude root documentation page
+toolbox_filenames(contains(toolbox_filenames, 'kWave.m')) = [];
 
 disp('Generating toolbox HTML...')
 old_dir = cd;
@@ -31,12 +33,14 @@ cd(old_dir);
 % Generate helptoc.xml file from list of .m source files
 addToXML('<?xml version=''1.0'' encoding="utf-8"?>');
 addToXML('<toc version="2.0">');
+addToXML('<tocitem target="myPackage.html">Sample MATLAB toolbox');
 % Automatically add links for all .m source files
 addToXML('<tocitem target="">Functions');
 for ind = 1:length(toolbox_filenames)
     [~, func_name, ~] = fileparts(toolbox_filenames{ind});
     addToXML(['<tocitem target="' func_name '.html">' func_name '</tocitem>']);
 end
+addToXML('</tocitem>');
 addToXML('</tocitem>');
 addToXML('</toc>');
 
