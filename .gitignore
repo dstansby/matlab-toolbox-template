@@ -1,4 +1,5 @@
 artifacts/
-docs/_build
 
 *.pyc
+
+helpfiles/*
