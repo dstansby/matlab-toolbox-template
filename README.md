@@ -14,6 +14,8 @@ matlab -batch run_tests
 
 The tests are run on GitHub actions - see [run_tests.yml](.github/workflows/run_tests.yml) for CI configuration. Code coverage is collected and uploaded to [codecov](https://about.codecov.io/).
 
+To run a subset of the tests instead of all of them, make sure the test you want to run is on the MATLAB path and use `run(my_test_file)`.
+
 ## Docs
 Documentation is automatically generated from MATLAB comments, e.g.
 ```matlab
