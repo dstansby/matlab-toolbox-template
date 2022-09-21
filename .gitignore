@@ -1,5 +1,4 @@
 artifacts/
-
-*.pyc
-
 helpfiles/*
+
+.DS_Store
