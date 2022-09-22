@@ -1,4 +1,5 @@
 import json
+import os
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Dict, List
@@ -60,4 +61,11 @@ if __name__ == "__main__":
     result_dict = load_test_result_xml(result_file)
     tests = extract_tests(result_dict)
     test_json = tests_to_json(tests)
-    print(test_json)
+
+    json_file = Path(__file__).parent.parent / "benchmarks.json"
+    if json_file.exists():
+        print("Deleting existing JSON benchmarks")
+        os.remove(json_file)
+
+    with open(json_file, "w") as f:
+        f.write(test_json)
