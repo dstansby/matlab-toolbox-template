@@ -19,3 +19,42 @@ jobs:
 
       - name: Upload code coverage
         uses: codecov/codecov-action@v3
+
+      - name: Upload test timings
+        uses: actions/upload-artifact@v3
+        with:
+          name: benchmarks
+          path: artifacts
+
+  update-benchmarks:
+    name: Update test benchmarks
+    needs: [matlab-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Download test times
+        uses: actions/download-artifact@v3
+        with:
+          name: benchmarks
+
+
+      - name: Parse test time file
+        run: |
+          python -m pip install -r benchmarks/requirements.txt
+          pwd
+          ls -a
+          python benchmarks/parse_performance.py
+
+      - name: Store benchmark result
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: Toolbox benchmarks
+          tool: customSmallerIsBetter
+          output-file-path: benchmarks.json
+          # Access token to deploy GitHub Pages branch
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          benchmark-data-dir-path: benchmarks
+          # Push and deploy GitHub pages branch automatically
+          auto-push: true
