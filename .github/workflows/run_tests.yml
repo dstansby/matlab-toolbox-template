@@ -43,3 +43,15 @@ jobs:
         run: |
           python -m pip install -r benchmarks/requirements.txt
           python benchmarks/parse_performance.py
+
+      - name: Store benchmark result
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: Toolbox benchmarks
+          tool: customSmallerIsBetter
+          output-file-path: benchmarks.json
+          # Access token to deploy GitHub Pages branch
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          benchmark-data-dir-path: benchmarks
+          # Push and deploy GitHub pages branch automatically
+          auto-push: true
