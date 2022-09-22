@@ -41,5 +41,5 @@ jobs:
 
       - name: Parse test time file
         run: |
-          python -m pip install benchmarks/requirements.txt
+          python -m pip install -r benchmarks/requirements.txt
           python benchmarks/parse_performance.py
