@@ -1,3 +1,0 @@
-ignore:
-  # MATLAB doesn't measure coverage on the test runner
-  - "run_tests.m"
