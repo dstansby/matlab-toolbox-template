@@ -54,7 +54,7 @@ def tests_to_json(tests: Tests) -> str:
 
 
 if __name__ == "__main__":
-    result_file = Path(__file__).parent.parent / "artifacts" / "results.xml"
+    result_file = Path(__file__).parent.parent / "results.xml"
     if not result_file.exists():
         raise FileNotFoundError(f"Could not find test result file at {result_file}")
 

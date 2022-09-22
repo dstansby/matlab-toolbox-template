@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: benchmarks
-          path: artifacts/results.xml
+          path: artifacts
 
   update-benchmarks:
     name: Update test benchmarks
@@ -39,9 +39,12 @@ jobs:
         with:
           name: benchmarks
 
+
       - name: Parse test time file
         run: |
           python -m pip install -r benchmarks/requirements.txt
+          pwd
+          ls -a
           python benchmarks/parse_performance.py
 
       - name: Store benchmark result
