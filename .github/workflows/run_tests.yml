@@ -30,6 +30,8 @@ jobs:
     name: Update test benchmarks
     needs: [matlab-tests]
     runs-on: ubuntu-latest
+    if: success() && github.ref == 'refs/heads/main'
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
