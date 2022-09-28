@@ -1,5 +1,5 @@
-classdef myClass
-    % myClass A dummy class
+classdef MyClass
+    % MyClass A dummy class
     %   Detailed explanation goes here
 
     properties
@@ -7,11 +7,11 @@ classdef myClass
         b     % Second public property
     end
     properties (Access=private)
-        Three   % Do not show this property
+        three   % Do not show this property
     end
 
     methods
-        function obj = myClass(a, b)
+        function obj = MyClass(a, b)
             % Constructor
             obj.a = a;
             obj.b = b;
@@ -24,8 +24,8 @@ classdef myClass
     end
 
     methods (Static)
-        function result = return_true
-            result = true;
+        function result = returnTrue
+            result = true
         end
     end
 

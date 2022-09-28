@@ -1,4 +1,5 @@
 artifacts/
-docs/_build
+helpfiles/*
+benchmarks.json
 
-*.pyc
+.DS_Store

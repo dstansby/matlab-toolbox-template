@@ -11,8 +11,8 @@ classdef unit_test < matlab.unittest.TestCase
 
     methods (Test)
         function testEqual(testCase)
-            result = mypackage.add_one([1, 3]);
-            testCase.verifyEqual(result, [2, 4]);
+            result = mypackage.addOne([1, 3])
+            testCase.verifyEqual(result, [2, 4])
         end
 
         function testNotEqual(testCase)
