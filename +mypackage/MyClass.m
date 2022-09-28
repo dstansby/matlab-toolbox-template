@@ -25,7 +25,7 @@ classdef MyClass
 
     methods (Static)
         function result = returnTrue
-            result = true
+            result = true;
         end
     end
 

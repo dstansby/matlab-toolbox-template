@@ -12,5 +12,5 @@
 %
 % |a| - (number) Input plus one.
 function result = addOne(x)
-    result = x + 1
+    result = x + 1;
 end

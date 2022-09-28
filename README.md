@@ -37,3 +37,6 @@ function result = addOne(x)
 end
 ```
 The documentation is compiled into static HTML pages using the [make_docs.m](./make_docs.m) script.
+
+## Linting
+The `run_code_quality.m` script runs linting on the MATLAB code to check for any code linting errors.
