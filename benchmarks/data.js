@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1663860928158,
+  "lastUpdate": 1664796619426,
   "repoUrl": "https://github.com/dstansby/matlab-toolbox-template",
   "entries": {
     "Toolbox benchmarks": [
@@ -159,6 +159,62 @@ window.BENCHMARK_DATA = {
           },
           {
             "name": "parametrized_test.testClass(num1=value2,num2=value2)",
+            "unit": "Seconds"
+          },
+          {
+            "name": "unit_test.testEqual",
+            "unit": "Seconds"
+          },
+          {
+            "name": "unit_test.testNotEqual",
+            "unit": "Seconds"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dstansby@gmail.com",
+            "name": "David Stansby",
+            "username": "dstansby"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "94a5f0bc6783ce48962265505b8424172e559d6a",
+          "message": "Merge pull request #12 from astanziola/code-quality-test\n\nCode quality test",
+          "timestamp": "2022-10-03T12:28:08+01:00",
+          "tree_id": "93749dab49a24d5e7d6c79dbfe3f38bf0d41c32c",
+          "url": "https://github.com/dstansby/matlab-toolbox-template/commit/94a5f0bc6783ce48962265505b8424172e559d6a"
+        },
+        "date": 1664796618980,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TestFixtures.defaultCurrentPoint",
+            "unit": "Seconds"
+          },
+          {
+            "name": "TestFixtures.defaultXLim",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=1,num2=3)",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=1,num2=4)",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=2,num2=3)",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=2,num2=4)",
             "unit": "Seconds"
           },
           {
