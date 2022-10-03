@@ -12,9 +12,13 @@ To run tests locally use:
 matlab -batch run_tests
 ```
 
-The tests are run on GitHub actions - see [run_tests.yml](.github/workflows/run_tests.yml) for CI configuration. Code coverage is collected and uploaded to [codecov](https://about.codecov.io/).
+The tests are run on GitHub actions - see [run_tests.yml](.github/workflows/run_tests.yml) for CI configuration.
+Code coverage is collected and uploaded to [codecov](https://about.codecov.io/).
 
 To run a subset of the tests instead of all of them, make sure the test you want to run is on the MATLAB path and use `run(my_test_file)`.
+
+The tests will output a file with test timings to `artifacts/results.xml`.
+This can be parsed into a JSON file using `benchmarks/parse_performance.py`.
 
 ## Docs
 Documentation is automatically generated from MATLAB comments, e.g.

@@ -14,7 +14,7 @@ class Test:
     """
 
     name: str
-    time: str
+    value: str
     unit: str = "Seconds"
 
 
@@ -54,7 +54,7 @@ def tests_to_json(tests: Tests) -> str:
 
 
 if __name__ == "__main__":
-    result_file = Path(__file__).parent.parent / "results.xml"
+    result_file = Path(__file__).parent.parent / "artifacts" / "results.xml"
     if not result_file.exists():
         raise FileNotFoundError(f"Could not find test result file at {result_file}")
 
@@ -69,3 +69,5 @@ if __name__ == "__main__":
 
     with open(json_file, "w") as f:
         f.write(test_json)
+
+    print(f"JSON file written to {json_file}")
