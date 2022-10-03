@@ -13,13 +13,14 @@ import matlab.unittest.plugins.codecoverage.CoberturaFormat
 oldpath = path;
 path('.', oldpath);
 
-suite = testsuite(pwd, 'IncludeSubfolders', true);
+tests_path = fullfile(pwd, 'tests');
+suite = testsuite(tests_path, 'IncludeSubfolders', true);
 
 [~,~] = mkdir('artifacts');
 
 runner = TestRunner.withTextOutput('OutputDetail', Verbosity.Detailed);
-runner.addPlugin(XMLPlugin.producingJUnitFormat('artifacts/results.xml'))
-runner.addPlugin(CodeCoveragePlugin.forFolder(pwd, 'IncludingSubfolders', true, 'Producing', CoberturaFormat('artifacts/cobertura.xml')))
+runner.addPlugin(XMLPlugin.producingJUnitFormat('artifacts/results.xml'));
+runner.addPlugin(CodeCoveragePlugin.forFolder(pwd, 'IncludingSubfolders', true, 'Producing', CoberturaFormat('artifacts/cobertura.xml')));
 
 results = runner.run(suite)
 assertSuccess(results);

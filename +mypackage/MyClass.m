@@ -13,19 +13,19 @@ classdef MyClass
     methods
         function obj = MyClass(a, b)
             % Constructor
-            obj.a = a
-            obj.b = b
+            obj.a = a;
+            obj.b = b;
         end
 
         function result = aPlusb(obj)
             % Adds a to b
-            result = obj.a + obj.b
+            result = obj.a + obj.b;
         end
     end
 
     methods (Static)
         function result = returnTrue
-            result = true
+            result = true;
         end
     end
 

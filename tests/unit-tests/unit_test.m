@@ -16,7 +16,7 @@ classdef unit_test < matlab.unittest.TestCase
         end
 
         function testNotEqual(testCase)
-            testCase.verifyNotEqual(1, 2)
+            testCase.verifyNotEqual(1, 2);
         end
     end
 end
