@@ -59,6 +59,10 @@ jobs:
         with:
           path: './helpfiles'
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      # Currently deploying benchmarks to GH pages, so not possible
+      # to deploy docs. Docs can still be viewed by manually downloading
+      # and opening the build artifact for this job.
+      #
+      # - name: Deploy to GitHub Pages
+      #  id: deployment
+      #  uses: actions/deploy-pages@v1
