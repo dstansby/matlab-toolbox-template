@@ -1,0 +1,14 @@
+name: Run MATLAB tests
+on: [push]
+
+jobs:
+  windows-tests:
+    name: Run unit tests on Windows
+    runs-on: [self-hosted, Windows]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Run tests
+        run: |
+          matlab -batch run_tests
