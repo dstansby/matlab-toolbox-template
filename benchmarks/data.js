@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664827634318,
+  "lastUpdate": 1665070445161,
   "repoUrl": "https://github.com/dstansby/matlab-toolbox-template",
   "entries": {
     "Toolbox benchmarks": [
@@ -191,6 +191,70 @@ window.BENCHMARK_DATA = {
           {
             "name": "unit_test.testNotEqual",
             "value": "0.032642",
+            "unit": "Seconds"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dstansby@gmail.com",
+            "name": "David Stansby",
+            "username": "dstansby"
+          },
+          "committer": {
+            "email": "dstansby@gmail.com",
+            "name": "David Stansby",
+            "username": "dstansby"
+          },
+          "distinct": true,
+          "id": "a857017a11d6da86669423ca2e853b189048217e",
+          "message": "Fix help path",
+          "timestamp": "2022-10-06T16:31:35+01:00",
+          "tree_id": "b2edfc6d4e8a73a72d2ce3dca2ca435d216db694",
+          "url": "https://github.com/dstansby/matlab-toolbox-template/commit/a857017a11d6da86669423ca2e853b189048217e"
+        },
+        "date": 1665070444692,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TestFixtures.defaultCurrentPoint",
+            "value": "3.1675",
+            "unit": "Seconds"
+          },
+          {
+            "name": "TestFixtures.defaultXLim",
+            "value": "1.5409",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=1,num2=3)",
+            "value": "0.13678",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=1,num2=4)",
+            "value": "0.00642",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=2,num2=3)",
+            "value": "0.005191",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=2,num2=4)",
+            "value": "0.004617",
+            "unit": "Seconds"
+          },
+          {
+            "name": "unit_test.testEqual",
+            "value": "0.023122",
+            "unit": "Seconds"
+          },
+          {
+            "name": "unit_test.testNotEqual",
+            "value": "0.020484",
             "unit": "Seconds"
           }
         ]
