@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1665070445161,
+  "lastUpdate": 1665434522976,
   "repoUrl": "https://github.com/dstansby/matlab-toolbox-template",
   "entries": {
     "Toolbox benchmarks": [
@@ -255,6 +255,70 @@ window.BENCHMARK_DATA = {
           {
             "name": "unit_test.testNotEqual",
             "value": "0.020484",
+            "unit": "Seconds"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dstansby@gmail.com",
+            "name": "David Stansby",
+            "username": "dstansby"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "683b85e1e26645dd6ee7e908f87ba34b76cf7fdc",
+          "message": "Merge pull request #27 from dstansby/pre-commit-ci-update-config\n\n[pre-commit.ci] pre-commit autoupdate",
+          "timestamp": "2022-10-10T21:40:04+01:00",
+          "tree_id": "e0afabb78fd7ae4f4ded0d48d6fce87ccf6f2bad",
+          "url": "https://github.com/dstansby/matlab-toolbox-template/commit/683b85e1e26645dd6ee7e908f87ba34b76cf7fdc"
+        },
+        "date": 1665434522181,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TestFixtures.defaultCurrentPoint",
+            "value": "3.2689",
+            "unit": "Seconds"
+          },
+          {
+            "name": "TestFixtures.defaultXLim",
+            "value": "1.5003",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=1,num2=3)",
+            "value": "0.10896",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=1,num2=4)",
+            "value": "0.006644",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=2,num2=3)",
+            "value": "0.00563",
+            "unit": "Seconds"
+          },
+          {
+            "name": "parametrized_test.testClass(num1=2,num2=4)",
+            "value": "0.004728",
+            "unit": "Seconds"
+          },
+          {
+            "name": "unit_test.testEqual",
+            "value": "0.023581",
+            "unit": "Seconds"
+          },
+          {
+            "name": "unit_test.testNotEqual",
+            "value": "0.021292",
             "unit": "Seconds"
           }
         ]
