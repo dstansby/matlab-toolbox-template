@@ -1,3 +1,7 @@
+| :exclamation:  This repository is no longer actively developed or maintained. You are encouraged to fork it if it is useful and you want to make changes/updates!  |
+|-----------------------------------------|
+
+
 # matlab-sandbox
 [![Run MATLAB tests](https://github.com/dstansby/matlab-sandbox/actions/workflows/run_tests.yml/badge.svg)](https://github.com/dstansby/matlab-sandbox/actions/workflows/run_tests.yml)
 [![codecov](https://codecov.io/gh/dstansby/matlab-sandbox/branch/main/graph/badge.svg?token=346NBCNNPY)](https://codecov.io/gh/dstansby/matlab-sandbox)
